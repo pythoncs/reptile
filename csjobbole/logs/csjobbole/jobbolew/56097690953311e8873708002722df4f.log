@@ -1,0 +1,72 @@
+2018-08-01 10:34:01 [scrapy.utils.log] INFO: Scrapy 1.5.1 started (bot: csjobbole)
+2018-08-01 10:34:01 [scrapy.utils.log] INFO: Versions: lxml 4.2.3.0, libxml2 2.9.8, cssselect 1.0.3, parsel 1.5.0, w3lib 1.19.0, Twisted 18.7.0, Python 3.6.5 (default, May  3 2018, 10:08:28) - [GCC 5.4.0 20160609], pyOpenSSL 18.0.0 (OpenSSL 1.1.0h  27 Mar 2018), cryptography 2.2.2, Platform Linux-4.13.0-45-generic-x86_64-with-Ubuntu-16.04-xenial
+2018-08-01 10:34:01 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'csjobbole', 'DUPEFILTER_CLASS': 'scrapy_redis.dupefilter.RFPDupeFilter', 'LOG_FILE': 'logs/csjobbole/jobbolew/56097690953311e8873708002722df4f.log', 'NEWSPIDER_MODULE': 'csjobbole.spiders', 'SCHEDULER': 'scrapy_redis.scheduler.Scheduler', 'SPIDER_MODULES': ['csjobbole.spiders']}
+2018-08-01 10:34:01 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats']
+2018-08-01 10:34:01 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2018-08-01 10:34:01 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2018-08-01 10:34:01 [scrapy.middleware] INFO: Enabled item pipelines:
+['csjobbole.pipelines.CsjobbolePipeline']
+2018-08-01 10:34:01 [scrapy.core.engine] INFO: Spider opened
+2018-08-01 10:34:01 [twisted] CRITICAL: Unhandled error in Deferred:
+2018-08-01 10:34:01 [twisted] CRITICAL: 
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/redis/connection.py", line 484, in connect
+    sock = self._connect()
+  File "/usr/local/lib/python3.6/dist-packages/redis/connection.py", line 541, in _connect
+    raise err
+  File "/usr/local/lib/python3.6/dist-packages/redis/connection.py", line 529, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/redis/client.py", line 667, in execute_command
+    connection.send_command(*args)
+  File "/usr/local/lib/python3.6/dist-packages/redis/connection.py", line 610, in send_command
+    self.send_packed_command(self.pack_command(*args))
+  File "/usr/local/lib/python3.6/dist-packages/redis/connection.py", line 585, in send_packed_command
+    self.connect()
+  File "/usr/local/lib/python3.6/dist-packages/redis/connection.py", line 489, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to localhost:6379. Connection refused.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/redis/connection.py", line 484, in connect
+    sock = self._connect()
+  File "/usr/local/lib/python3.6/dist-packages/redis/connection.py", line 541, in _connect
+    raise err
+  File "/usr/local/lib/python3.6/dist-packages/redis/connection.py", line 529, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/twisted/internet/defer.py", line 1418, in _inlineCallbacks
+    result = g.send(result)
+  File "/usr/local/lib/python3.6/dist-packages/scrapy/crawler.py", line 82, in crawl
+    yield self.engine.open_spider(self.spider, start_requests)
+redis.exceptions.ConnectionError: Error 111 connecting to localhost:6379. Connection refused.

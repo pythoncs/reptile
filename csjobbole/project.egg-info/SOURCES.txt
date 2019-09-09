@@ -1,0 +1,14 @@
+setup.py
+csjobbole/__init__.py
+csjobbole/items.py
+csjobbole/middlewares.py
+csjobbole/pipelines.py
+csjobbole/settings.py
+csjobbole/spiders/__init__.py
+csjobbole/spiders/index.py
+csjobbole/spiders/jobbolew.py
+project.egg-info/PKG-INFO
+project.egg-info/SOURCES.txt
+project.egg-info/dependency_links.txt
+project.egg-info/entry_points.txt
+project.egg-info/top_level.txt
